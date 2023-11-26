@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO Website</title>
+    <style>
+    @import url('https://fonts.cdnfonts.com/css/satoshi');
+     *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+     }
+     body{
+        background-color: white;
+        font-family: 'Satoshi' , sans-serif;
+     }
+     header{
+        width: 90%;
+        margin: 0 auto;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 10px;
+        border-bottom: 1px solid rgb(187, 186, 186);
+     }
+     p{
+        color: #363636;
+     }
+     header .icon{
+        width: 40px;
+        position: relative;
+        margin-left: 20px;
+     }
+     header .icon h2{
+        font-size: 30px;
+        font-weight: bolder;
+     }
+     header .icon > .leaf{
+        width: 25px;
+        position: absolute;
+        top: 0;
+        right: -3px;
+        z-index: -1;
+     }
+     .leaf > img{
+        width: 100%;
+     }
+     nav{
+        margin-top: -30px;
+        margin-right: -30px;
+        background-color: rgb(228, 102, 123);
+        text-align: center;
+        height: fit-content;
+        padding: 10px 30px;
+        display: none;
+     }
+     nav ul{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+     }
+     nav ul > li > a{
+        text-decoration: none;
+        color: white;
+     }
+     button{
+        background-color: #B00050;
+        padding: 10px;
+        border-radius: 15px;
+        color: white;
+        border: none;
+     }
+     .section-one{
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 50px;
+        position: relative;
+     }
+     .section-one .image{
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+     }
+     .section-one .image img{
+        width: 100%;
+        height: 100%;
+     }
+     .section-one .content{
+        position: absolute;
+        width: 90%;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% ,-50%);
+        color: white;
+     }
+     .section-one .content p {
+        font-size: 12px;
+        line-height: 15px;
+        width: 80%;
+        margin: 0 auto;
+     }
+     .section-one button{
+        background-color: #B00050;
+     }
+     .section-two{
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 50px;
+     }
+     .section-two .content{
+        text-align: center;
+        line-height: 25px;
+     }
+     .section-two .image{
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    .section-two .image img{
+        animation-name: example;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        width: 100%;
+    }
+    @keyframes example{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+     .section-three {
+        width: 85%;
+        margin: 0 auto;
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 100px;
+     } 
+    .section-three .content-one{
+        align-self: center;
+        padding: 50px 0px;
+        line-height: 20px;
+    }
+    .section-three .content-one h3 , .section-three .content-one p{
+        padding-bottom: 10px;
+        color: black;
+    }
+    .section-three .content-one a{
+        color: black;
+        cursor: pointer;
+    }
+    .section-three .content-one h3{
+        position: relative;
+        width: fit-content;
+    }
+    .section-three .content-one h3 span{
+        position: absolute;
+        right: -10px;
+        z-index: -3;
+        top: -8px;
+    }
+    .section-three .content-two{
+        background-color: #FEFAFA;
+        padding:40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .section-three .content-two > div{
+        display: flex;
+        gap: 10px;
+        font-size: 12px;
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .section-three .content-two > div h5{
+        padding-bottom: 10px;
+    }
+    .section-three .content-two > div p{
+        line-height: 15px;
+    }
+    .section-three .content-two > div:first-child .img , .section-three .content-two > div:nth-child(2) .img , .section-three .content-two > div:nth-child(3) .img , .section-three .content-two > div:nth-child(4) .img{
+        background-color: black;
+        padding: 2px;
+        height: fit-content;
+        border-radius: 5px;
+    }
+    .section-three .content-two > div:nth-child(2) .img{
+        background-color: #fc34eb;
+    }
+    .section-three .content-two > div:nth-child(3) .img{
+        background-color: #4795f5;
+    }
+    .section-three .content-two > div:nth-child(4) .img{
+      background-color: #b4b40bcc;   
+    }
+    .section-four{
+        width: 100%;
+        background-color:#FEF7F775;
+    }
+    .section-four article{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin: 50px auto;
+        padding: 70px 0px;
+    }
+    .section-four article .image{
+      width: 90%;
+      max-width: 400px;
+      margin: 0 auto;
+      object-fit: cover;
+      text-align: center;
+      position: relative;
+      margin-top: 70px;
+    }
+    .section-four article .image::before{
+        content: url(images/Vector1.png);
+        position: absolute;
+        inset: 0;
+        z-index: -2 ;
+        left: -60px;
+        top: -100px;
+    }
+    .section-four .image img:first-child{
+       width: 100%;
+    }
+    .section-four article .content h2 , .section-four .content button{
+        margin: 10px 0px;
+    }
+    .section-five{
+        width: 100%;
+    }
+    .section-five .content{
+        width: 90%;
+        text-align: center;
+        padding: 50px 0px;
+       margin: 0 auto;
+    }
+    .section-five .content h3{
+        padding-bottom: 10px;
+    }
+    .section-five article{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .section-five .card{
+        width: 80%;
+        max-width: 500px;
+        margin: 0 auto;
+        height: fit-content;
+        object-fit: cover;
+        background-color: rgb(233, 227, 227);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 30px;
+    }
+    .section-five .card .image{
+        width: 95%;
+        object-fit: cover;
+    }
+    .section-five .card .image img{
+        width: 100%;
+        margin-left: 10px;
+    }
+    .section-five .card .content h4{
+        line-height: 30px;
+    }
+    .section-five .card .content p{
+        line-height: 25px;
+        color: rgb(99, 99, 99);
+    }
+    .section-six{
+        margin-top: 100px;
+        background-color: #FEFAFA;
+    }
+    .section-six .content{
+        text-align: center;
+        padding-bottom: 80px;
+        padding-top: 30px;
+    }
+    .section-six article{
+        display: grid;
+        grid-template-columns: 1fr ;
+        place-items: center;
+        gap: 10px;
+        width: 95%;
+        margin: 0 auto;
+    }
+    .section-six .cards{
+        width: 100%;
+        max-width: 400px;
+        height: 400px;
+        background-color: white;
+        padding: 10px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+    }
+    .section-six .cards .image{
+        width: 150px;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+    .section-six .cards .image img{
+        width: 100%;
+        margin-top: -50px;
+    }
+    footer{
+        width: 100%;
+        margin-top: 100px;
+    }
+    footer article:first-child{
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #FEFAFA;
+        padding: 20px;
+        margin-bottom: 5px;
+        border-radius: 50px 50px 10px 10px;
+    }
+    footer .icon{
+        position: relative;
+        width: fit-content;
+    }
+    footer .icon span{
+        position: absolute;
+        right: -10px;
+        z-index: 3;
+        top: -5px;
+    }
+    footer article:first-child h3{
+        padding: 15px 0;
+    }
+    footer article:first-child .input{
+        position: relative;
+        background-color : white;
+        width: 80%;
+        margin: 20px auto;
+        height: 55px;
+        border-radius: 10px;
+    }
+    footer article:first-child .input input{
+        border: 0;
+        outline: none;
+        position: absolute;
+        left: 0;
+        width: 60%;
+        height: 100%;
+        background-color: #ffffff;
+        border-radius: 10px;
+    }
+    footer article:first-child .input button{
+        background-color: #B00050;
+        color: white;
+        padding: 10px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        border-radius: 10px;
+    }
+    footer article:last-child{
+        width: 100%;
+        background-color: #FEFAFA;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+    footer article:last-child ul{
+        list-style-type: none;
+    }
+    footer article:last-child .icons{
+        width: 20px;
+        object-fit: cover;
+    }
+    footer article:last-child .icon-box {
+       display: flex;
+       margin-top: 15px;
+       gap: 10px;
+    }
+    footer article:last-child .icons img{
+        width: 100%;
+    }
+    @media screen and (min-width: 950px) {
+     
+        .section-one .image{
+           width: 75%;
+           height: 500px;
+           margin: 0 auto;
+           object-fit: contain;
+        }
+        .section-two .image{
+            width: 50%;
+        }
+        .section-four article{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            gap: 100px;
+            margin: 0 auto;
+            width: 80%;
+        }
+        .section-four article .image{
+            max-width: 400px;
+        }
+        .section-four .content{
+            align-self: center;
+        }
+    }
+    @media screen and (min-width: 1300px){
+        .section-one .image{
+            height: 600px;
+        }
+        .section-three{
+            flex-direction: row;
+            gap: 30px;
+            margin: 100px auto;
+            justify-content: space-evenly;
+        }
+        .section-three .content-one{
+            width: 50%;
+        }
+        .section-five aside{
+            width: 100%;
+            margin: 0 auto;
+
+        }
+       
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="icon">
+            <h2>dg</h2>
+            <div class="leaf">
+                <img src="images/Vector.png" alt="">
+            </div>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our cause</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Donate Now</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="section-one">
+        <div class="image">
+            <img src="images/Rectangle 28.png" alt="">
+        </div>
+        <div class="content">
+            <h2>Empower Girls For A Bright Future</h2>
+            <p>We are on a passionate mission to break down barriers and provide young girls with more than just pads. We are dedicated to granting them the freedom to pursue their dreams, excel in education, and lead healthier, more dignified lives.</p>
+            <button>Support Now</button>
+        </div>
+    </section>
+    <section class="section-two">
+        <div class="content">
+            <h3>Your Support Matters</h3>
+            <p>Every contribution, big or small, can make a significant difference in the lives of girls we empower. Choose from one-time donations, monthly giving, or explore corporate partnership opportunities. Your generosity fuels our mission to provide menstrual hygiene access to every girl.</p>
+        </div>
+        <div class="image">
+            <img src="images/Frame 37.png" alt="">
+        </div>
+    </section>
+    <section class="section-three">
+    <div class="content-one">
+       <h3>Our Programs And Initiatives 
+        <span>
+            <img src="images/Vector.png" alt="" width="20px">
+        </span>
+        </h3>
+            <p>We are on a passionate mission to break down barriers and provide young girls with more than just pads. We are dedicated to granting them the freedom to pursue their dreams, excel in education, and lead healthier, more dignified lives.</p>
+            <a href="#">Learn more</a>
+        </div>
+        <div class="content-two">
+            <div>
+                <div class="img">
+                    <img src="images/covid_personal-hygiene-hand-soap-2.png" alt="">
+                </div>
+                <div>
+                    <h5>Menstrual Hygiene Education In Schools</h5>
+                    <p>Our flagship program focuses on educating schoolgirls about menstrual hygiene. </p>
+                </div>
+            </div>
+            <div>
+                <div class="img">
+                    <img src="images/ri_open-arm-line.png" alt="">
+                </div>
+                <div>
+                    <h5>Empowerment Workshops For Girls</h5>
+                    <p>Beyond menstrual hygiene, we believe in empowering girls with life skills and confidence.</p>
+                </div>
+            </div>
+            <div>
+                <div class="img">
+                    <img src="images/fluent_people-community-24-regular.png">
+                </div>
+                <div>
+                    <h5>Community Engagement And Advocacy</h5>
+                    <p>We actively engage with communities to foster a supportive environment for menstrual health.</p>
+                </div>
+            </div>
+            <div>
+                <div class="img">
+                    <img src="images/la_school.png">
+                </div>
+                <div>
+                    <h5>Community Engagement And Advocacy</h5>
+                    <p>We actively engage with communities to foster a supportive environment for menstrual health.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-four">
+    <article>
+        <div class="image">
+            <div>
+                <img src="images/Rectangle 17.png" alt="">
+            </div>
+        </div>
+        <div class="content">
+            <h2>Explore Our Blog</h2>
+            <p>Welcome to our blog, a hub of knowledge, inspiration, and empowerment. Here, we share a wealth of information on menstrual health, hygiene, and the transformative impact of our programs. Our blog is not just about breaking taboos; it's about breaking barriers and empowering girls everywhere.
+            </p>
+            <button>Stay Connceted</button>
+        </div>
+    </article>
+    </section>
+    <section class="section-five">
+      <div class="content">
+        <h3>Upcoming Campaign And Events
+            <span>
+                <img src="images/Vector.png" alt="" width="20px">
+            </span> 
+        </h3>
+        <p>Mark Your Calendar and Join the Movement Discover What's Next on Our Agenda  Don't Miss Out</p>
+      </div>
+      <aside>
+        <article>
+            <div class="card">
+                <div class="image">
+                    <img src="images/inside card.png" alt="">
+                </div>
+                <div class="content">
+                    <h4>Menstrual Hygiene Day Campaign</h4> 
+                    <p>Promote your participation in Menstrual Hygiene Day (May 28th) and outline your plans for the campaign. This could include awareness activities, online events, or distribution drives.";</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+            <div class="card">
+               <div class="image">
+                <img src="images/Rectangle 10.png" alt="">
+               </div>
+               <div class="content">
+                <h4>Back-to-School Drive</h4>
+                <p>Highlight an upcoming back-to-school drive where your NGO will distribute hygiene kits and educational materials to girls returning to school after a break. Giving back to the society</p>
+                <a href="#">Learn Morehh</a>
+               </div>
+            </div>
+            <div class="card">
+                <div class="image" style="height: 300px;">
+                    <img src="images/Rectangle 17.png" alt="" height="100%">
+                </div>
+                <div class="content">
+                    <h4>Digital Awareness Campaign</h4>
+                    <p>Our online campaign is a platform for breaking the silence around menstruation and fostering open conversations.Share your story, raise awareness, and be part of the change we wish to see in the world.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </article>
+      </aside>
+    </section>
+    <section class="section-six">
+       <div class="content"> 
+        <h2>Testimonies</h2>
+        <p>Hear from beneficiaries and supporters</p>
+       </div> 
+        <article>
+            <div class="cards">
+                <div class="image">
+                    <img src="images/Ellipse 7.png" alt="">
+                </div>
+                <div class="content">
+                    <p>"I cannot express how much your organization has changed my life. Before, I struggled every month, missing school and feeling ashamed. But with the hygiene kits and education you provided, I now have the confidence and knowledge to manage my menstrual health. Thank you for giving me the freedom to thrive."</p>
+                    <h3>Alfred</h3>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="image">
+                    <img src="images/Ellipse 7 (1).png" alt="">
+                </div>
+                <div class="content">
+                    <p>"I cannot express how much your organization has changed my life. Before, I struggled every month, missing school and feeling ashamed. But with the hygiene kits and education you provided, I now have the confidence and knowledge to manage my menstrual health. Thank you for giving me the freedom to thrive."</p>
+                    <h3>Alfred</h3>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="image">
+                    <img src="images/Ellipse 7 (2).png" alt="">
+                </div>
+                <div class="content">
+                    <p>"I cannot express how much your organization has changed my life. Before, I struggled every month, missing school and feeling ashamed. But with the hygiene kits and education you provided, I now have the confidence and knowledge to manage my menstrual health. Thank you for giving me the freedom to thrive."</p>
+                    <h3>Alfred</h3>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="image">
+                    <img src="images/Ellipse 07.png" alt="">
+                </div>
+                <div class="content">
+                    <p>"I cannot express how much your organization has changed my life. Before, I struggled every month, missing school and feeling ashamed. But with the hygiene kits and education you provided, I now have the confidence and knowledge to manage my menstrual health. Thank you for giving me the freedom to thrive."</p>
+                    <h3>Alfred</h3>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <article>
+            <h3>Newsletter Signup</h3>
+            <p>Don't miss out on our updates, events, and stories. 
+                Join our newsletter community to receive a monthly dose of inspiration and information. </p>
+            <div class="input">
+                <input type="email" name="" id="">
+                <button>Subscribe</button>
+            </div>
+        </article>
+        <article>
+            <div class="icon">
+                <h1>dg</h1>
+                <span>
+                    <img src="images/Vector.png" alt="" width="20px">
+                </span>
+            </div>
+            <div class="quick">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li>About Us</li>
+                    <li>Our Cause</li>
+                    <li>Contact us</li>
+                </ul>
+            </div>
+            <div class="info">
+                <h4>Contact Information</h4>
+                <ul>
+                    <li>oladimejitaiwo@gmail.com</li>
+                    <li>+2348130131714</li>
+                    <li>Lagos,Nigeria</li>
+                </ul>
+            </div>
+            <div class="Touch">
+                <h4>Quick Links</h4>
+                <p>Would you like to support <br>
+                    the move? Connect with us.</p>
+                <div class="icon-box">    
+                <div class="icons">
+                    <img src="images/Group.png" alt="">
+                </div>
+                <div class="icons">
+                    <img src="images/Vector (1).png" alt="">
+                </div>
+                <div class="icons">
+                    <img src="images/Group (1).png" alt="">
+                </div>
+                </div>
+            </div>
+        </article>
+    </footer>
+</body>
+</html>
