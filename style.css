@@ -25,7 +25,7 @@ header{
    padding: 30px 10px;
 }
 p{
-   color: #c9c9c9;
+   color: #464646;
 }
 header .icon{
    width: 40px;
@@ -48,7 +48,6 @@ header .icon > .leaf{
 }
 nav{
    margin-top: -30px;
-   margin-right: -40px;
    background-color: rgb(228, 102, 123);
    text-align: center;
    height: 100dvh;
@@ -132,7 +131,8 @@ button{
    font-size: 12px;
    line-height: 15px;
    width: 80%;
-   margin: 0 auto;
+   margin: 30px auto;
+   color: rgb(219, 215, 215);
 }
 .section-one button{
    background-color: #B00050;
@@ -278,7 +278,7 @@ button{
 .section-five article{
    display: flex;
    flex-direction: column;
-   gap: 100px;
+   gap: 50px;
 }
 .section-five .card{
    width: 80%;
@@ -310,7 +310,7 @@ button{
    line-height: 25px;
    color: rgb(99, 99, 99);
 }
-.section-five .button{
+.section-five .desktop-content{
    display: none;
 }
 .section-six{
@@ -364,6 +364,7 @@ footer article:first-child{
 footer .icon{
    position: relative;
    width: fit-content;
+   font-size: 50px;
 }
 footer .icon span{
    position: absolute;
@@ -404,12 +405,16 @@ footer article:first-child .input button{
 footer article:last-child{
    width: 100%;
    background-color: #FEFAFA;
+ 
+}
+footer article:last-child aside{
+   width: 90%;
+   margin: 0 auto;
    display: grid;
    grid-template-columns: 1fr 1fr;
    gap: 20px;
    padding: 20px;
-   justify-items: center;
-   
+   justify-content: space-evenly;
 }
 footer article:last-child ul{
    list-style-type: none;
@@ -423,19 +428,28 @@ footer article:last-child .icon-box {
    margin-top: 15px;
    gap: 10px;
 }
-footer article:last-child .icons img{
+footer article:last-child .icons img{ 
    width: 100%;
 }
 @media screen and (min-width: 700px){
    nav{
       width: 50%;
-      margin-right: -60px;
+     
    }
    .section-three .content-two > div h5{
       font-size: 14px;
    }
    .section-three .content-two > div p{
       font-size: 12px;
+   }
+   footer article:last-child aside{
+      width: 50%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      padding: 20px;
+      justify-content: space-between;
    }
 }
 @media screen and (min-width: 950px) {
@@ -491,7 +505,10 @@ footer article:last-child .icons img{
       width: 500px;
       height: 650px;
    }
-   .section-five .button{
+   .section-five .mobile-content{
+      display: none;
+   }
+   .section-five .desktop-content{
       display: block;
    }
  .section-six article {

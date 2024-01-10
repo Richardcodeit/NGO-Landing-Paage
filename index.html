@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <title>NGO Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="body">
     <header>
         <div class="header">
         <div class="icon">
@@ -117,7 +119,7 @@
         </div>
     </article>
     </section>
-    <section class="section-five">
+    <section class="section-five">   
       <div class="content">
         <h3>Upcoming Campaign And Events
             <span>
@@ -126,7 +128,7 @@
         </h3>
         <p>Mark Your Calendar and Join the Movement Discover What's Next on Our Agenda  Don't Miss Out</p>
       </div>
-      <aside>
+      <aside class="mobile-content">
         <article class="container">
             <div class="card">
                 <div class="image">
@@ -179,11 +181,82 @@
                  </div>
              </div>
         </article>
-        <div style="text-align: center;" class="button">
-        <button class="prev" > Prev</button>
-        <button class="next"> next</button>
-        </div>
       </aside>
+      <aside class="desktop-content swiper mySwiper">
+      <article class="container swiper-wrapper">
+        <div class="card swiper-slide" >
+            <div class="image">
+                <img src="images/inside card.png" alt="">
+            </div>
+            <div class="content">
+                <h4>Menstrual Hygiene Day Campaign</h4> 
+                <p>Promote your participation in Menstrual Hygiene Day (May 28th) and outline your plans for the campaign. This could include awareness activities, online events, or distribution drives.";</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+        <div class="card swiper-slide" >
+           <div class="image">
+            <img src="images/Rectangle 10.png" alt="">
+           </div>
+           <div class="content">
+            <h4>Back-to-School Drive</h4>
+            <p>Highlight an upcoming back-to-school drive where your NGO will distribute hygiene kits and educational materials to girls returning to school after a break. Giving back to the society</p>
+            <a href="#">Learn Morehh</a>
+           </div>
+        </div>
+        <div class="card swiper-slide" >
+            <div class="image" style="height: 300px;">
+                <img src="images/Rectangle 17.png" alt="" height="100%">
+            </div>
+            <div class="content">
+                <h4>Digital Awareness Campaign</h4>
+                <p>Our online campaign is a platform for breaking the silence around menstruation and fostering open conversations.Share your story, raise awareness, and be part of the change we wish to see in the world.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+        <div class="card swiper-slide" >
+            <div class="image">
+             <img src="images/Rectangle 10.png" alt="">
+            </div>
+            <div class="content">
+             <h4>Back-to-School Drive</h4>
+             <p>Highlight an upcoming back-to-school drive where your NGO will distribute hygiene kits and educational materials to girls returning to school after a break. Giving back to the society</p>
+             <a href="#">Learn Morehh</a>
+            </div>
+         </div>
+         <div class="card swiper-slide"  >
+             <div class="image" style="height: 300px;">
+                 <img src="images/Rectangle 17.png" alt="" height="100%">
+             </div>
+             <div class="content">
+                 <h4>Digital Awareness Campaign</h4>
+                 <p>Our online campaign is a platform for breaking the silence around menstruation and fostering open conversations.Share your story, raise awareness, and be part of the change we wish to see in the world.</p>
+                 <a href="#">Learn More</a>
+             </div>
+         </div>
+         <div class="swiper-button-next"></div>
+         <div class="swiper-button-prev"></div>
+         <div class="swiper-pagination"></div>
+    </article>
+         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    </script>
+  </aside>
+
+  <!-- Initialize Swiper -->
     </section>
     <section class="section-six">
        <div class="content"> 
@@ -240,6 +313,7 @@
             </div>
         </article>
         <article>
+            <aside>
             <div class="icon">
                 <h1>dg</h1>
                 <span>
@@ -271,13 +345,11 @@
                     <img src="images/Group.png" alt="">
                 </div>
                 <div class="icons">
-                    <img src="images/Vector (1).png" alt="">
-                </div>
-                <div class="icons">
                     <img src="images/Group (1).png" alt="">
                 </div>
                 </div>
             </div>
+            </aside>
         </article>
     </footer>
     <script src="script.js"> </script>
